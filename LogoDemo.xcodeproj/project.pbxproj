@@ -10,9 +10,21 @@
 		BF7CF6152644004F00F6C9D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7CF6142644004F00F6C9D2 /* AppDelegate.swift */; };
 		BF7CF6172644004F00F6C9D2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7CF6162644004F00F6C9D2 /* SceneDelegate.swift */; };
 		BF7CF6192644004F00F6C9D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7CF6182644004F00F6C9D2 /* ViewController.swift */; };
-		BF7CF61C2644004F00F6C9D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF7CF61A2644004F00F6C9D2 /* Main.storyboard */; };
 		BF7CF61E2644005200F6C9D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF7CF61D2644005200F6C9D2 /* Assets.xcassets */; };
 		BF7CF6212644005200F6C9D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF7CF61F2644005200F6C9D2 /* LaunchScreen.storyboard */; };
+		BF7CF6292644013800F6C9D2 /* LogoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7CF6282644013800F6C9D2 /* LogoVC.swift */; };
+		BF7CF62B2644016400F6C9D2 /* LogoSettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7CF62A2644016400F6C9D2 /* LogoSettingsVC.swift */; };
+		BF7CF62D2644018500F6C9D2 /* HomeTabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7CF62C2644018500F6C9D2 /* HomeTabBarVC.swift */; };
+		BF7CF63126442E4E00F6C9D2 /* LogoTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7CF63026442E4E00F6C9D2 /* LogoTitleLabel.swift */; };
+		BF7CF633264436B500F6C9D2 /* LogoBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7CF632264436B500F6C9D2 /* LogoBodyLabel.swift */; };
+		BF7CF6362644388500F6C9D2 /* LogoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7CF6352644388500F6C9D2 /* LogoTextField.swift */; };
+		BF7CF63926443BA200F6C9D2 /* ColorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7CF63826443BA200F6C9D2 /* ColorButton.swift */; };
+		BF7CF63B2644DA1B00F6C9D2 /* ColorStackVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7CF63A2644DA1B00F6C9D2 /* ColorStackVC.swift */; };
+		BF7CF6412644E7B000F6C9D2 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7CF6402644E7B000F6C9D2 /* Profile.swift */; };
+		BF7CF6462645090500F6C9D2 /* ImageStackVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7CF6452645090500F6C9D2 /* ImageStackVC.swift */; };
+		BF7CF6492645094800F6C9D2 /* LogoImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7CF6482645094800F6C9D2 /* LogoImage.swift */; };
+		BF7CF64B2645124A00F6C9D2 /* ImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7CF64A2645124A00F6C9D2 /* ImageButton.swift */; };
+		BF7CF64D26451F6600F6C9D2 /* WKWebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7CF64C26451F6600F6C9D2 /* WKWebVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +32,22 @@
 		BF7CF6142644004F00F6C9D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF7CF6162644004F00F6C9D2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BF7CF6182644004F00F6C9D2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BF7CF61B2644004F00F6C9D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BF7CF61D2644005200F6C9D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF7CF6202644005200F6C9D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF7CF6222644005200F6C9D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF7CF6282644013800F6C9D2 /* LogoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoVC.swift; sourceTree = "<group>"; };
+		BF7CF62A2644016400F6C9D2 /* LogoSettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoSettingsVC.swift; sourceTree = "<group>"; };
+		BF7CF62C2644018500F6C9D2 /* HomeTabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarVC.swift; sourceTree = "<group>"; };
+		BF7CF63026442E4E00F6C9D2 /* LogoTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoTitleLabel.swift; sourceTree = "<group>"; };
+		BF7CF632264436B500F6C9D2 /* LogoBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoBodyLabel.swift; sourceTree = "<group>"; };
+		BF7CF6352644388500F6C9D2 /* LogoTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoTextField.swift; sourceTree = "<group>"; };
+		BF7CF63826443BA200F6C9D2 /* ColorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorButton.swift; sourceTree = "<group>"; };
+		BF7CF63A2644DA1B00F6C9D2 /* ColorStackVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorStackVC.swift; sourceTree = "<group>"; };
+		BF7CF6402644E7B000F6C9D2 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		BF7CF6452645090500F6C9D2 /* ImageStackVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStackVC.swift; sourceTree = "<group>"; };
+		BF7CF6482645094800F6C9D2 /* LogoImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoImage.swift; sourceTree = "<group>"; };
+		BF7CF64A2645124A00F6C9D2 /* ImageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageButton.swift; sourceTree = "<group>"; };
+		BF7CF64C26451F6600F6C9D2 /* WKWebVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKWebVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,12 +83,88 @@
 				BF7CF6142644004F00F6C9D2 /* AppDelegate.swift */,
 				BF7CF6162644004F00F6C9D2 /* SceneDelegate.swift */,
 				BF7CF6182644004F00F6C9D2 /* ViewController.swift */,
-				BF7CF61A2644004F00F6C9D2 /* Main.storyboard */,
+				BF7CF64C26451F6600F6C9D2 /* WKWebVC.swift */,
+				BF7CF643264508A500F6C9D2 /* Model */,
+				BF7CF644264508B200F6C9D2 /* Home Tab */,
+				BF7CF62E26442E2600F6C9D2 /* Components */,
 				BF7CF61D2644005200F6C9D2 /* Assets.xcassets */,
 				BF7CF61F2644005200F6C9D2 /* LaunchScreen.storyboard */,
 				BF7CF6222644005200F6C9D2 /* Info.plist */,
 			);
 			path = LogoDemo;
+			sourceTree = "<group>";
+		};
+		BF7CF62E26442E2600F6C9D2 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				BF7CF6472645093400F6C9D2 /* Views */,
+				BF7CF6422645089800F6C9D2 /* TabBarVC */,
+				BF7CF63726443B8D00F6C9D2 /* Button */,
+				BF7CF6342644386800F6C9D2 /* TextField */,
+				BF7CF62F26442E3500F6C9D2 /* Label */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		BF7CF62F26442E3500F6C9D2 /* Label */ = {
+			isa = PBXGroup;
+			children = (
+				BF7CF63026442E4E00F6C9D2 /* LogoTitleLabel.swift */,
+				BF7CF632264436B500F6C9D2 /* LogoBodyLabel.swift */,
+			);
+			path = Label;
+			sourceTree = "<group>";
+		};
+		BF7CF6342644386800F6C9D2 /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				BF7CF6352644388500F6C9D2 /* LogoTextField.swift */,
+			);
+			path = TextField;
+			sourceTree = "<group>";
+		};
+		BF7CF63726443B8D00F6C9D2 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				BF7CF63826443BA200F6C9D2 /* ColorButton.swift */,
+				BF7CF64A2645124A00F6C9D2 /* ImageButton.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		BF7CF6422645089800F6C9D2 /* TabBarVC */ = {
+			isa = PBXGroup;
+			children = (
+				BF7CF62C2644018500F6C9D2 /* HomeTabBarVC.swift */,
+			);
+			path = TabBarVC;
+			sourceTree = "<group>";
+		};
+		BF7CF643264508A500F6C9D2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BF7CF6402644E7B000F6C9D2 /* Profile.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BF7CF644264508B200F6C9D2 /* Home Tab */ = {
+			isa = PBXGroup;
+			children = (
+				BF7CF6282644013800F6C9D2 /* LogoVC.swift */,
+				BF7CF62A2644016400F6C9D2 /* LogoSettingsVC.swift */,
+				BF7CF6452645090500F6C9D2 /* ImageStackVC.swift */,
+				BF7CF63A2644DA1B00F6C9D2 /* ColorStackVC.swift */,
+			);
+			path = "Home Tab";
+			sourceTree = "<group>";
+		};
+		BF7CF6472645093400F6C9D2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BF7CF6482645094800F6C9D2 /* LogoImage.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,7 +226,6 @@
 			files = (
 				BF7CF6212644005200F6C9D2 /* LaunchScreen.storyboard in Resources */,
 				BF7CF61E2644005200F6C9D2 /* Assets.xcassets in Resources */,
-				BF7CF61C2644004F00F6C9D2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,23 +236,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF7CF6462645090500F6C9D2 /* ImageStackVC.swift in Sources */,
+				BF7CF64D26451F6600F6C9D2 /* WKWebVC.swift in Sources */,
+				BF7CF6362644388500F6C9D2 /* LogoTextField.swift in Sources */,
+				BF7CF6492645094800F6C9D2 /* LogoImage.swift in Sources */,
+				BF7CF6412644E7B000F6C9D2 /* Profile.swift in Sources */,
+				BF7CF62B2644016400F6C9D2 /* LogoSettingsVC.swift in Sources */,
 				BF7CF6192644004F00F6C9D2 /* ViewController.swift in Sources */,
+				BF7CF63B2644DA1B00F6C9D2 /* ColorStackVC.swift in Sources */,
+				BF7CF64B2645124A00F6C9D2 /* ImageButton.swift in Sources */,
+				BF7CF6292644013800F6C9D2 /* LogoVC.swift in Sources */,
+				BF7CF62D2644018500F6C9D2 /* HomeTabBarVC.swift in Sources */,
 				BF7CF6152644004F00F6C9D2 /* AppDelegate.swift in Sources */,
+				BF7CF633264436B500F6C9D2 /* LogoBodyLabel.swift in Sources */,
+				BF7CF63926443BA200F6C9D2 /* ColorButton.swift in Sources */,
 				BF7CF6172644004F00F6C9D2 /* SceneDelegate.swift in Sources */,
+				BF7CF63126442E4E00F6C9D2 /* LogoTitleLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		BF7CF61A2644004F00F6C9D2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BF7CF61B2644004F00F6C9D2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		BF7CF61F2644005200F6C9D2 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
