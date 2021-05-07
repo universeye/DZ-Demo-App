@@ -12,6 +12,7 @@ class LogoVC: UIViewController {
     private let imageView = UIImageView()
     private let titleLabel = LogoTitleLabel(textAlignment: .center, fontSize: 28)
     private let bodyLabel = LogoBodyLabel(textAlignment: .center, fontSize: 15)
+    private let WKWebButton = NormalButton(backgroundColor: .systemPink, title: "Open WKWeb Page")
     
     let button = UIButton.init(frame: CGRect.init(x: 0, y: 200, width: 100, height: 50))
     
@@ -22,6 +23,7 @@ class LogoVC: UIViewController {
         configureImageView()
         configureTitleLabel()
         configureBodyLabel()
+        configureWKButton()
     }
     
     
@@ -80,6 +82,30 @@ class LogoVC: UIViewController {
         ])
     }
     
+    private func configureWKButton() {
+        view.addSubview(WKWebButton)
+        WKWebButton.addTarget(self, action: #selector(didTapWKWebButton), for: .touchUpInside)
+        
+        NSLayoutConstraint.activate([
+            WKWebButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            WKWebButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            WKWebButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20),
+            WKWebButton.heightAnchor.constraint(equalToConstant: 50)
+        ])
+    }
+    
+    
+    @objc func didTapWKWebButton() {
+        guard let url = URL(string: "https://www.apple.com/tw/") else {
+            print("Invalid URL")
+            return
+        }
+        let webVC = WKWebViewVC(url: url, title: "Google")
+        
+        present(UINavigationController(rootViewController: webVC), animated: true, completion: nil)
+    }
+    
+    
     
     @objc func settingsButtonTapp() {
         let settin = LogoSettingsVC()
@@ -106,15 +132,12 @@ class LogoVC: UIViewController {
     
     
     @objc private func buttonAction(button : UIButton) {
-        
         button.isSelected = !button.isSelected
-        
         if button.isSelected {
             print("selected")
         } else {
             print("no")
         }
-        
     }
 }
 //MARK: - Extension
