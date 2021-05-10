@@ -12,7 +12,7 @@ class LogoVC: UIViewController {
     private let imageView = UIImageView()
     private let titleLabel = LogoTitleLabel(textAlignment: .center, fontSize: 28)
     private let bodyLabel = LogoBodyLabel(textAlignment: .center, fontSize: 15)
-    private let WKWebButton = NormalButton(backgroundColor: .systemPink, title: "Open WKWeb Page")
+    private let WKWebButton = NormalButton(backgroundColor: .systemPink, title: "Open WKWeb Page(Apple.com)")
     
     let button = UIButton.init(frame: CGRect.init(x: 0, y: 200, width: 100, height: 50))
     
@@ -36,6 +36,9 @@ class LogoVC: UIViewController {
         
         let settingsButton = UIBarButtonItem(image: UIImage(systemName: "gearshape"), style: .plain, target: self, action: #selector(settingsButtonTapp))
         navigationItem.rightBarButtonItem = settingsButton
+        
+        let cameraButton = UIBarButtonItem(image: UIImage(systemName: "camera"), style: .plain, target: self, action: #selector(cameraTapped))
+        navigationItem.leftBarButtonItem = cameraButton
     }
     
     
@@ -100,7 +103,7 @@ class LogoVC: UIViewController {
             print("Invalid URL")
             return
         }
-        let webVC = WKWebViewVC(url: url, title: "Google")
+        let webVC = WKWebViewVC(url: url, title: "Apple")
         
         present(UINavigationController(rootViewController: webVC), animated: true, completion: nil)
     }
@@ -110,8 +113,13 @@ class LogoVC: UIViewController {
     @objc func settingsButtonTapp() {
         let settin = LogoSettingsVC()
         settin.delegate = self
-        navigationController?.pushViewController(settin, animated: true)
+        present(UINavigationController(rootViewController: settin), animated: true, completion: nil)
         
+    }
+    
+    @objc func cameraTapped() {
+        let snapchatVC = SnapChatCameraVC()
+        present(UINavigationController(rootViewController: snapchatVC), animated: true, completion: nil)
     }
     
     

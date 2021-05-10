@@ -27,6 +27,8 @@
 		BF7CF64D26451F6600F6C9D2 /* WKWebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7CF64C26451F6600F6C9D2 /* WKWebVC.swift */; };
 		BF7CF64F26457D5900F6C9D2 /* NormalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7CF64E26457D5900F6C9D2 /* NormalButton.swift */; };
 		BF7CF65126457F9A00F6C9D2 /* WKWebViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7CF65026457F9A00F6C9D2 /* WKWebViewVC.swift */; };
+		BF7CF6632648F99B00F6C9D2 /* SnapChatCameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7CF6622648F99B00F6C9D2 /* SnapChatCameraVC.swift */; };
+		BF7CF665264905C000F6C9D2 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7CF664264905C000F6C9D2 /* CircleButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,8 @@
 		BF7CF64C26451F6600F6C9D2 /* WKWebVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKWebVC.swift; sourceTree = "<group>"; };
 		BF7CF64E26457D5900F6C9D2 /* NormalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalButton.swift; sourceTree = "<group>"; };
 		BF7CF65026457F9A00F6C9D2 /* WKWebViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKWebViewVC.swift; sourceTree = "<group>"; };
+		BF7CF6622648F99B00F6C9D2 /* SnapChatCameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapChatCameraVC.swift; sourceTree = "<group>"; };
+		BF7CF664264905C000F6C9D2 /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +137,7 @@
 				BF7CF63826443BA200F6C9D2 /* ColorButton.swift */,
 				BF7CF64A2645124A00F6C9D2 /* ImageButton.swift */,
 				BF7CF64E26457D5900F6C9D2 /* NormalButton.swift */,
+				BF7CF664264905C000F6C9D2 /* CircleButton.swift */,
 			);
 			path = Button;
 			sourceTree = "<group>";
@@ -161,6 +166,7 @@
 				BF7CF6452645090500F6C9D2 /* ImageStackVC.swift */,
 				BF7CF63A2644DA1B00F6C9D2 /* ColorStackVC.swift */,
 				BF7CF65026457F9A00F6C9D2 /* WKWebViewVC.swift */,
+				BF7CF6622648F99B00F6C9D2 /* SnapChatCameraVC.swift */,
 			);
 			path = "Home Tab";
 			sourceTree = "<group>";
@@ -257,6 +263,8 @@
 				BF7CF6152644004F00F6C9D2 /* AppDelegate.swift in Sources */,
 				BF7CF633264436B500F6C9D2 /* LogoBodyLabel.swift in Sources */,
 				BF7CF65126457F9A00F6C9D2 /* WKWebViewVC.swift in Sources */,
+				BF7CF665264905C000F6C9D2 /* CircleButton.swift in Sources */,
+				BF7CF6632648F99B00F6C9D2 /* SnapChatCameraVC.swift in Sources */,
 				BF7CF63926443BA200F6C9D2 /* ColorButton.swift in Sources */,
 				BF7CF6172644004F00F6C9D2 /* SceneDelegate.swift in Sources */,
 				BF7CF63126442E4E00F6C9D2 /* LogoTitleLabel.swift in Sources */,

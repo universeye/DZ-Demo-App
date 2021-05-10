@@ -53,7 +53,7 @@ class LogoSettingsVC: UIViewController {
         delegate.didTapDoneSetImage(logoImage: ima)
         delegate.didTapDoneSetColor(profileColor: pro)
         delegate.didTapDoneSetLabel(label: Label(title: titleTextField.text ?? "", body: bodyTextField.text ?? ""))
-        navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
     }
 
     
