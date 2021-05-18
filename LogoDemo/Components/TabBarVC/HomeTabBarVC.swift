@@ -26,9 +26,9 @@ class HomeTabBarVC: UITabBarController {
     //safari
     
     func createWKWebViewVC() -> UINavigationController {
-        let webVC = WKWebVC()
-        webVC.title = "Web"
-        webVC.tabBarItem.image = UIImage(systemName: "safari")
+        let webVC = PickerVC()
+        webVC.title = "Picker"
+        webVC.tabBarItem.image = UIImage(systemName: "list.bullet.indent")
         
         return UINavigationController(rootViewController: webVC)
     }
