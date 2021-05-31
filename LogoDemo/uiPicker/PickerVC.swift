@@ -17,11 +17,12 @@ class PickerVC: UIViewController {
     let pickerView1 = UIPickerView()
     lazy var settingsButton = UIBarButtonItem(barButtonSystemItem: .stop, target: self, action: #selector(settingsButtonTapped))
     lazy var slotvcButton = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(slotvcButtonTapped))
+    lazy var bookKeepingButton = UIBarButtonItem(image: UIImage(systemName: "lasso.sparkles"), style: .done, target: self, action: #selector(bookKeepingButtonTapped))
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.rightBarButtonItems = [settingsButton, slotvcButton]
+        navigationItem.rightBarButtonItems = [settingsButton, slotvcButton, bookKeepingButton]
         pickerView1.delegate = self
         pickerView1.dataSource = self
         pickerView1.center = view.center
@@ -40,6 +41,11 @@ class PickerVC: UIViewController {
     @objc func slotvcButtonTapped() {
         let slotMachinceVC = SlotMachineVC()
         present(slotMachinceVC, animated: true, completion: nil)
+    }
+    
+    @objc func bookKeepingButtonTapped() {
+        let bookKeepingVC = BookKeepingVC()
+        present(bookKeepingVC, animated: true, completion: nil)
     }
 }
 

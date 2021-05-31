@@ -21,7 +21,8 @@ class LogoSettingsVC: UIViewController {
     private let imageStackView = UIView()
     
     var pro = ProfileColor(accentColor: .red)
-    var ima = logoImage(imageName: "icon0")
+    var ima = logoImage(imageName: "icon1")
+    
     lazy var saveBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "checkmark"), style: .done, target: self, action: #selector(saveBarButtonItemTapped))
     
     var delegate: LogoSettingsDelegate!
@@ -52,7 +53,7 @@ class LogoSettingsVC: UIViewController {
     @objc fileprivate func saveBarButtonItemTapped() {
         delegate.didTapDoneSetImage(logoImage: ima)
         delegate.didTapDoneSetColor(profileColor: pro)
-        delegate.didTapDoneSetLabel(label: Label(title: titleTextField.text ?? "", body: bodyTextField.text ?? ""))
+        delegate.didTapDoneSetLabel(label: Label(title: titleTextField.text ?? "SwiftUI", body: bodyTextField.text ?? "Developer"))
         dismiss(animated: true, completion: nil)
     }
 
@@ -103,6 +104,15 @@ class LogoSettingsVC: UIViewController {
         colorView.translatesAutoresizingMaskIntoConstraints = false
         colorView.backgroundColor = .secondarySystemBackground
         colorView.layer.cornerRadius = 15
+        //shaodow
+        colorView.layer.shadowColor = UIColor.black.cgColor
+        colorView.layer.shadowOffset = .zero
+        colorView.layer.shadowRadius = 20
+        colorView.layer.shadowOpacity = 0.7
+        //colorView.layer.shadowPath = UIBezierPath(rect: colorView.bounds).cgPath
+        colorView.layer.shouldRasterize = true
+        colorView.layer.rasterizationScale = UIScreen.main.scale
+        
         let colorStack = ColorStackVC()
         colorStack.delegate = self
         self.addChildVC(childViewC: colorStack, to: colorView)

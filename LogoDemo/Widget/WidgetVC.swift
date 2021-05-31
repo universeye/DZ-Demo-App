@@ -1,0 +1,56 @@
+//
+//  WidgetVC.swift
+//  LogoDemo
+//
+//  Created by Terry Kuo on 2021/5/31.
+//
+
+import UIKit
+import WidgetKit
+
+class WidgetVC: UIViewController {
+    
+    private var textField = LogoTextField(placeholder: " set widget text")
+    private var okButtom = NormalButton(backgroundColor: .purple, title: "Save")
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        view.backgroundColor = .link
+        configureTextFieldAndButton()
+    }
+    
+    private func configureTextFieldAndButton() {
+        view.addSubview(textField)
+        view.addSubview(okButtom)
+        
+        okButtom.addTarget(self, action: #selector(okButtonTapped), for: .touchUpInside)
+        
+        NSLayoutConstraint.activate([
+            textField.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor,constant: 16),
+            textField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            textField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            textField.heightAnchor.constraint(equalToConstant: 50),
+            
+            okButtom.topAnchor.constraint(equalTo: textField.bottomAnchor, constant: 20),
+            okButtom.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            okButtom.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            okButtom.heightAnchor.constraint(equalToConstant: 50)
+        ])
+    }
+    
+    @objc private func okButtonTapped() {
+        textField.resignFirstResponder()
+        
+        let userDefaults = UserDefaults(suiteName: "group.widgetcache501")
+        
+        guard let text = textField.text, !text.isEmpty else {
+            return
+        }
+        
+        userDefaults?.setValue(text, forKey: "text")
+        
+        WidgetCenter.shared.reloadAllTimelines()
+    }
+
+}

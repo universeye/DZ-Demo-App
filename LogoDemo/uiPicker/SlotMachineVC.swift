@@ -53,7 +53,6 @@ class SlotMachineVC: UIViewController {
     private func configureButton() {
         view.addSubview(playButton)
         playButton.addTarget(self, action: #selector(randomplay), for: .touchUpInside)
-        playButton.backgroundColor = .blue
         NSLayoutConstraint.activate([
             playButton.topAnchor.constraint(equalTo: pickerView.bottomAnchor, constant: 20),
             playButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),

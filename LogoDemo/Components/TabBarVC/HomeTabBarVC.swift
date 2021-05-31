@@ -12,7 +12,7 @@ class HomeTabBarVC: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewControllers = [createLogoVC(), createWKWebViewVC()]
+        viewControllers = [createLogoVC(), createWKWebViewVC(), createWidgetVC()]
     }
     
     func createLogoVC() -> UINavigationController {
@@ -31,6 +31,14 @@ class HomeTabBarVC: UITabBarController {
         webVC.tabBarItem.image = UIImage(systemName: "list.bullet.indent")
         
         return UINavigationController(rootViewController: webVC)
+    }
+    
+    func createWidgetVC() -> UIViewController {
+        let widgetVC = WidgetVC()
+        widgetVC.title = "Widget"
+        widgetVC.tabBarItem.image = UIImage(systemName: "rectangle.expand.vertical")
+        
+        return widgetVC
     }
 
 }
