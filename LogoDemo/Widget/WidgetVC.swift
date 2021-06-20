@@ -20,6 +20,26 @@ class WidgetVC: UIViewController {
         configureTextFieldAndButton()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        okButtom.alpha = 0
+        okButtom.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        UIView.animate(withDuration: 0.5, delay: 0, options: UIView.AnimationOptions.curveEaseInOut, animations: {
+            self.okButtom.alpha = 1
+            self.okButtom.transform = CGAffineTransform(scaleX: 1, y: 1)
+            self.view.layoutIfNeeded()
+        }, completion: nil)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            UIView.animate(withDuration: 0.5, delay: 0, options: UIView.AnimationOptions.curveEaseInOut, animations: {
+                self.okButtom.alpha = 0.3
+            }, completion: nil)
+        }
+    }
+    
     private func configureTextFieldAndButton() {
         view.addSubview(textField)
         view.addSubview(okButtom)
@@ -40,6 +60,7 @@ class WidgetVC: UIViewController {
     }
     
     @objc private func okButtonTapped() {
+        print("Button tapped")
         textField.resignFirstResponder()
         
         let userDefaults = UserDefaults(suiteName: "group.widgetcache501")
