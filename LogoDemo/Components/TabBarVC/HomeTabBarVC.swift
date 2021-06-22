@@ -12,7 +12,7 @@ class HomeTabBarVC: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewControllers = [createLogoVC(), createWKWebViewVC(), createWidgetVC()]
+        viewControllers = [createLogoVC(), createWKWebViewVC(), createAnimationVC(), createWidgetVC()]
     }
     
     func createLogoVC() -> UINavigationController {
@@ -39,6 +39,15 @@ class HomeTabBarVC: UITabBarController {
         widgetVC.tabBarItem.image = UIImage(systemName: "rectangle.expand.vertical")
         
         return widgetVC
+    }
+    
+    func createAnimationVC() -> UINavigationController {
+        let animateVC = AnimationViewController()
+        animateVC.title = "Animations"
+        
+        animateVC.tabBarItem.image = UIImage(named: "icons8")
+        
+        return UINavigationController(rootViewController: animateVC)
     }
 
 }

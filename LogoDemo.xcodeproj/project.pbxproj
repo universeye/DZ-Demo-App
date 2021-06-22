@@ -40,6 +40,8 @@
 		BF7CF65126457F9A00F6C9D2 /* WKWebViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7CF65026457F9A00F6C9D2 /* WKWebViewVC.swift */; };
 		BF7CF6632648F99B00F6C9D2 /* SnapChatCameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7CF6622648F99B00F6C9D2 /* SnapChatCameraVC.swift */; };
 		BF7CF665264905C000F6C9D2 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7CF664264905C000F6C9D2 /* CircleButton.swift */; };
+		BF984A8F2681D89A00205B78 /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF984A8E2681D89A00205B78 /* AnimationViewController.swift */; };
+		BF984A912681E59A00205B78 /* AnimationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF984A902681E59A00205B78 /* AnimationTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +106,8 @@
 		BF7CF65026457F9A00F6C9D2 /* WKWebViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKWebViewVC.swift; sourceTree = "<group>"; };
 		BF7CF6622648F99B00F6C9D2 /* SnapChatCameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapChatCameraVC.swift; sourceTree = "<group>"; };
 		BF7CF664264905C000F6C9D2 /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
+		BF984A8E2681D89A00205B78 /* AnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationViewController.swift; sourceTree = "<group>"; };
+		BF984A902681E59A00205B78 /* AnimationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +195,7 @@
 				BF6AA14F2664A85E001CD2CF /* LogoDemo.entitlements */,
 				BF7CF6142644004F00F6C9D2 /* AppDelegate.swift */,
 				BF7CF6162644004F00F6C9D2 /* SceneDelegate.swift */,
+				BF984A8D2681D88200205B78 /* AnimationVC */,
 				BF7CF6182644004F00F6C9D2 /* ViewController.swift */,
 				BF6B04832653FF78002A9B4A /* uiPicker */,
 				BF7CF643264508A500F6C9D2 /* Model */,
@@ -279,6 +284,15 @@
 				BF7CF6482645094800F6C9D2 /* LogoImage.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		BF984A8D2681D88200205B78 /* AnimationVC */ = {
+			isa = PBXGroup;
+			children = (
+				BF984A8E2681D89A00205B78 /* AnimationViewController.swift */,
+				BF984A902681E59A00205B78 /* AnimationTableViewCell.swift */,
+			);
+			path = AnimationVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -407,12 +421,14 @@
 				BF7CF64B2645124A00F6C9D2 /* ImageButton.swift in Sources */,
 				BF7CF6292644013800F6C9D2 /* LogoVC.swift in Sources */,
 				BF7CF62D2644018500F6C9D2 /* HomeTabBarVC.swift in Sources */,
+				BF984A912681E59A00205B78 /* AnimationTableViewCell.swift in Sources */,
 				BF7CF6152644004F00F6C9D2 /* AppDelegate.swift in Sources */,
 				BF7CF633264436B500F6C9D2 /* LogoBodyLabel.swift in Sources */,
 				BF7CF65126457F9A00F6C9D2 /* WKWebViewVC.swift in Sources */,
 				BF7CF665264905C000F6C9D2 /* CircleButton.swift in Sources */,
 				BF7CF6632648F99B00F6C9D2 /* SnapChatCameraVC.swift in Sources */,
 				BF7CF63926443BA200F6C9D2 /* ColorButton.swift in Sources */,
+				BF984A8F2681D89A00205B78 /* AnimationViewController.swift in Sources */,
 				BF7CF6172644004F00F6C9D2 /* SceneDelegate.swift in Sources */,
 				BF7CF63126442E4E00F6C9D2 /* LogoTitleLabel.swift in Sources */,
 			);
