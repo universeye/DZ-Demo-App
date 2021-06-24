@@ -14,9 +14,15 @@ class AnimationViewController: UIViewController {
         table.register(AnimationTableViewCell.self, forCellReuseIdentifier: AnimationTableViewCell.reuseID)
         return table
     }()
-
+    
+    lazy var animationvc2sButton = UIBarButtonItem(image: UIImage(systemName: "cursorarrow.motionlines.click"), style: .plain, target: self, action: #selector(animationvc2sButtonTapped))
+    
+    lazy var sliderAniVCButton = UIBarButtonItem(image: UIImage(systemName: "arrow.up.left.and.down.right.and.arrow.up.right.and.down.left"), style: .plain, target: self, action: #selector(sliderAniVCButtonTapped))
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationItem.rightBarButtonItems = [animationvc2sButton, sliderAniVCButton]
         view.addSubview(tableView)
         tableView.delegate = self
         tableView.dataSource = self
@@ -29,6 +35,8 @@ class AnimationViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         tableView.frame = view.bounds
     }
+    
+    
         
     func animateTable() {
         tableView.reloadData()
@@ -52,9 +60,22 @@ class AnimationViewController: UIViewController {
             index += 1
         }
     }
+    
+    @objc private func animationvc2sButtonTapped() {
+        let animationDemo2vc = AnimationDemo2VC()
+        navigationController?.pushViewController(animationDemo2vc, animated: true)
+    }
+    
+    @objc private func sliderAniVCButtonTapped() {
+        let sliderAniVC = SliderAniVC()
+        navigationController?.pushViewController(sliderAniVC, animated: true)
+    }
 
 }
 
+
+
+//MARK: - extension
 
 extension AnimationViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

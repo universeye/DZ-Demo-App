@@ -42,6 +42,8 @@
 		BF7CF665264905C000F6C9D2 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7CF664264905C000F6C9D2 /* CircleButton.swift */; };
 		BF984A8F2681D89A00205B78 /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF984A8E2681D89A00205B78 /* AnimationViewController.swift */; };
 		BF984A912681E59A00205B78 /* AnimationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF984A902681E59A00205B78 /* AnimationTableViewCell.swift */; };
+		BF984A93268213BB00205B78 /* AnimationDemo2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF984A92268213BB00205B78 /* AnimationDemo2VC.swift */; };
+		BFDD5C29268481A400CD4986 /* SliderAniVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDD5C28268481A400CD4986 /* SliderAniVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +110,8 @@
 		BF7CF664264905C000F6C9D2 /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
 		BF984A8E2681D89A00205B78 /* AnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationViewController.swift; sourceTree = "<group>"; };
 		BF984A902681E59A00205B78 /* AnimationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationTableViewCell.swift; sourceTree = "<group>"; };
+		BF984A92268213BB00205B78 /* AnimationDemo2VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationDemo2VC.swift; sourceTree = "<group>"; };
+		BFDD5C28268481A400CD4986 /* SliderAniVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderAniVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -291,6 +295,8 @@
 			children = (
 				BF984A8E2681D89A00205B78 /* AnimationViewController.swift */,
 				BF984A902681E59A00205B78 /* AnimationTableViewCell.swift */,
+				BF984A92268213BB00205B78 /* AnimationDemo2VC.swift */,
+				BFDD5C28268481A400CD4986 /* SliderAniVC.swift */,
 			);
 			path = AnimationVC;
 			sourceTree = "<group>";
@@ -414,6 +420,7 @@
 				BF7CF6412644E7B000F6C9D2 /* Profile.swift in Sources */,
 				BF7CF62B2644016400F6C9D2 /* LogoSettingsVC.swift in Sources */,
 				BF7CF6192644004F00F6C9D2 /* ViewController.swift in Sources */,
+				BFDD5C29268481A400CD4986 /* SliderAniVC.swift in Sources */,
 				BF7CF63B2644DA1B00F6C9D2 /* ColorStackVC.swift in Sources */,
 				BF6B04892654C010002A9B4A /* BookKeepingVC.swift in Sources */,
 				BF6B04872654064E002A9B4A /* SlotMachineVC.swift in Sources */,
@@ -429,6 +436,7 @@
 				BF7CF6632648F99B00F6C9D2 /* SnapChatCameraVC.swift in Sources */,
 				BF7CF63926443BA200F6C9D2 /* ColorButton.swift in Sources */,
 				BF984A8F2681D89A00205B78 /* AnimationViewController.swift in Sources */,
+				BF984A93268213BB00205B78 /* AnimationDemo2VC.swift in Sources */,
 				BF7CF6172644004F00F6C9D2 /* SceneDelegate.swift in Sources */,
 				BF7CF63126442E4E00F6C9D2 /* LogoTitleLabel.swift in Sources */,
 			);

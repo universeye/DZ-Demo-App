@@ -28,6 +28,7 @@ class ChoiceVC: UIViewController {
         configureButton()
     }
     
+    
 
     func setUpPickerView(data:[String]) {
       // 設置顯示資料
