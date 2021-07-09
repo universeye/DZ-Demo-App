@@ -41,6 +41,7 @@ class WKWebViewVC: UIViewController {
         view.backgroundColor = .systemBackground
         view.addSubview(webView)
         webView.load(URLRequest(url: url))
+        webView.allowsBackForwardNavigationGestures = true
         
         navigationItem.rightBarButtonItem = refreshButtonItem
         navigationItem.leftBarButtonItem = doneButton
@@ -60,5 +61,7 @@ class WKWebViewVC: UIViewController {
     @objc func doneTapped() {
         dismiss(animated: true, completion: nil)
     }
-
+    
 }
+
+

@@ -24,8 +24,11 @@ class SliderAniVC: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         
-        animator.stopAnimation(true)
-        animator.finishAnimation(at: .current)
+        if animator.isRunning {
+            animator.stopAnimation(true)
+            animator.finishAnimation(at: .current)
+        }
+        
         
         redBox.removeFromSuperview()
     }
