@@ -19,6 +19,22 @@ class PickerVC: UIViewController {
     lazy var slotvcButton = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(slotvcButtonTapped))
     lazy var bookKeepingButton = UIBarButtonItem(image: UIImage(systemName: "lasso.sparkles"), style: .done, target: self, action: #selector(bookKeepingButtonTapped))
     
+    
+    private let floatingButton: UIButton = {
+        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 60, height: 60))
+        button.layer.cornerRadius = 30
+        button.backgroundColor = .systemPink
+        
+        let image = UIImage(systemName: "plus", withConfiguration: UIImage.SymbolConfiguration(pointSize: 32, weight: .medium))
+        button.setImage(image, for: .normal)
+        button.tintColor = .white
+        
+        button.layer.shadowOpacity = 0.4
+        
+        
+        return button
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,6 +45,18 @@ class PickerVC: UIViewController {
         pickerView1.backgroundColor = .systemRed
         view.backgroundColor = .systemBackground
         view.addSubview(pickerView1)
+        view.addSubview(floatingButton)
+        
+        floatingButton.addTarget(self, action: #selector(floatingButtonTapped), for: .touchUpInside)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        floatingButton.frame = CGRect(x: view.frame.size.width - 70, y: view.frame.size.height - 150, width: 60, height: 60)
+    }
+    
+    @objc private func floatingButtonTapped() {
+        
     }
     
     
