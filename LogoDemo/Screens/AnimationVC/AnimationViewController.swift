@@ -22,6 +22,8 @@ class AnimationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        configureVC()
+        
         navigationItem.rightBarButtonItems = [animationvc2sButton, sliderAniVCButton]
         view.addSubview(tableView)
         tableView.delegate = self
@@ -36,7 +38,16 @@ class AnimationViewController: UIViewController {
         tableView.frame = view.bounds
     }
     
-    
+    private func configureVC() {
+        guard let customFont = UIFont(name: "RobotoMono-Italic", size: UIFont.labelFontSize) else {
+            fatalError("""
+                Failed to load the "RobotoMono-Italic" font.
+                Make sure the font file is included in the project and the font name is spelled correctly.
+                """
+            )
+        }
+        self.navigationController!.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: customFont]
+    }
         
     func animateTable() {
         tableView.reloadData()

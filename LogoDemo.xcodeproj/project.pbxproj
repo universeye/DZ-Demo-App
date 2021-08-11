@@ -43,6 +43,8 @@
 		BF984A8F2681D89A00205B78 /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF984A8E2681D89A00205B78 /* AnimationViewController.swift */; };
 		BF984A912681E59A00205B78 /* AnimationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF984A902681E59A00205B78 /* AnimationTableViewCell.swift */; };
 		BF984A93268213BB00205B78 /* AnimationDemo2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF984A92268213BB00205B78 /* AnimationDemo2VC.swift */; };
+		BFAD64D426C434DD00BABC90 /* RobotoMono-Italic-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFAD64D226C434DD00BABC90 /* RobotoMono-Italic-VariableFont_wght.ttf */; };
+		BFAD64D526C434DD00BABC90 /* RobotoMono-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFAD64D326C434DD00BABC90 /* RobotoMono-VariableFont_wght.ttf */; };
 		BFDD5C29268481A400CD4986 /* SliderAniVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDD5C28268481A400CD4986 /* SliderAniVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -111,6 +113,8 @@
 		BF984A8E2681D89A00205B78 /* AnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationViewController.swift; sourceTree = "<group>"; };
 		BF984A902681E59A00205B78 /* AnimationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationTableViewCell.swift; sourceTree = "<group>"; };
 		BF984A92268213BB00205B78 /* AnimationDemo2VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationDemo2VC.swift; sourceTree = "<group>"; };
+		BFAD64D226C434DD00BABC90 /* RobotoMono-Italic-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoMono-Italic-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		BFAD64D326C434DD00BABC90 /* RobotoMono-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoMono-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		BFDD5C28268481A400CD4986 /* SliderAniVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderAniVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -196,6 +200,7 @@
 		BF7CF6132644004F00F6C9D2 /* LogoDemo */ = {
 			isa = PBXGroup;
 			children = (
+				BFAD64D126C434C200BABC90 /* Fonts */,
 				BF6AA14F2664A85E001CD2CF /* LogoDemo.entitlements */,
 				BF7CF6142644004F00F6C9D2 /* AppDelegate.swift */,
 				BF7CF6162644004F00F6C9D2 /* SceneDelegate.swift */,
@@ -299,6 +304,15 @@
 			path = AnimationVC;
 			sourceTree = "<group>";
 		};
+		BFAD64D126C434C200BABC90 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				BFAD64D226C434DD00BABC90 /* RobotoMono-Italic-VariableFont_wght.ttf */,
+				BFAD64D326C434DD00BABC90 /* RobotoMono-VariableFont_wght.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		BFDD5C2A2684D58800CD4986 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
@@ -399,6 +413,8 @@
 			files = (
 				BF7CF6212644005200F6C9D2 /* LaunchScreen.storyboard in Resources */,
 				BF7CF61E2644005200F6C9D2 /* Assets.xcassets in Resources */,
+				BFAD64D526C434DD00BABC90 /* RobotoMono-VariableFont_wght.ttf in Resources */,
+				BFAD64D426C434DD00BABC90 /* RobotoMono-Italic-VariableFont_wght.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
