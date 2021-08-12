@@ -30,10 +30,20 @@ class PickerVC: UIViewController {
         button.tintColor = .white
         
         button.layer.shadowOpacity = 0.4
-        
-        
         return button
     }()
+    
+    var sectionIsExpanded: Bool = true {
+        didSet {
+            UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 0.25, delay: 0) {
+                if self.sectionIsExpanded {
+                    self.floatingButton.transform = CGAffineTransform.identity
+                } else {
+                    self.floatingButton.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi / 2))
+                }
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,11 +52,11 @@ class PickerVC: UIViewController {
         pickerView1.delegate = self
         pickerView1.dataSource = self
         pickerView1.center = view.center
-        pickerView1.backgroundColor = .systemRed
+
         view.backgroundColor = .systemBackground
         view.addSubview(pickerView1)
         view.addSubview(floatingButton)
-        
+        configureVC()
         floatingButton.addTarget(self, action: #selector(floatingButtonTapped), for: .touchUpInside)
     }
     
@@ -56,9 +66,19 @@ class PickerVC: UIViewController {
     }
     
     @objc private func floatingButtonTapped() {
-        
+        sectionIsExpanded = !sectionIsExpanded
     }
     
+    private func configureVC() {
+            guard let customFont = UIFont(name: "RobotoMono-Italic", size: UIFont.labelFontSize) else {
+                fatalError("""
+                    Failed to load the "RobotoMono-Italic" font.
+                    Make sure the font file is included in the project and the font name is spelled correctly.
+                    """
+                )
+            }
+            self.navigationController!.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: customFont]
+        }
     
     
     @objc func settingsButtonTapped() {

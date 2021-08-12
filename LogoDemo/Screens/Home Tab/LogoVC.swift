@@ -29,7 +29,6 @@ class LogoVC: UIViewController {
     
     
     
-    
     private func configureLogoVC() {
         view.backgroundColor = .systemBackground
         navigationController?.navigationBar.prefersLargeTitles = true
