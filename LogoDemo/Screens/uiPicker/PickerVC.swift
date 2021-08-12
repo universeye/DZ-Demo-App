@@ -9,6 +9,7 @@ import UIKit
 
 class PickerVC: UIViewController {
     
+    //MARK: - Properties
     let originList = ["", "台北","板橋","桃園","新竹"]
     let finalList = ["", "台中","嘉義","台南", "左營"]
     var selectedOrigin = ""
@@ -18,6 +19,15 @@ class PickerVC: UIViewController {
     lazy var settingsButton = UIBarButtonItem(barButtonSystemItem: .stop, target: self, action: #selector(settingsButtonTapped))
     lazy var slotvcButton = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(slotvcButtonTapped))
     lazy var bookKeepingButton = UIBarButtonItem(image: UIImage(systemName: "lasso.sparkles"), style: .done, target: self, action: #selector(bookKeepingButtonTapped))
+    
+    private let trashButton: UIButton = {
+        let bt = UIButton(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+        //        bt.backgroundColor = .blue
+        bt.setImage(UIImage(systemName: "trash.fill"), for: .normal)
+        bt.layer.cornerRadius = 20
+        bt.tintColor = .label
+        return bt
+    }()
     
     
     private let floatingButton: UIButton = {
@@ -38,48 +48,62 @@ class PickerVC: UIViewController {
             UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 0.25, delay: 0) {
                 if self.sectionIsExpanded {
                     self.floatingButton.transform = CGAffineTransform.identity
+                    self.trashButton.alpha = 0
+                    self.trashButton.frame = CGRect(x: self.view.frame.size.width - 70, y: self.view.frame.size.height - 140, width: 40, height: 40)
                 } else {
-                    self.floatingButton.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi / 2))
+                    self.floatingButton.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi / 4))
+                    self.trashButton.alpha = 1
+                    self.trashButton.frame = CGRect(x: self.view.frame.size.width - 120, y: self.view.frame.size.height - 140, width: 40, height: 40)
                 }
             }
         }
     }
     
+    //MARK: - App's LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.rightBarButtonItems = [settingsButton, slotvcButton, bookKeepingButton]
+        configureVC()
+        
         pickerView1.delegate = self
         pickerView1.dataSource = self
         pickerView1.center = view.center
-
-        view.backgroundColor = .systemBackground
-        view.addSubview(pickerView1)
-        view.addSubview(floatingButton)
-        configureVC()
+        
+        floatingButton.frame = CGRect(x: view.frame.size.width - 70, y: view.frame.size.height - 150, width: 60, height: 60)
         floatingButton.addTarget(self, action: #selector(floatingButtonTapped), for: .touchUpInside)
+        trashButton.frame = CGRect(x: view.frame.size.width - 70, y: view.frame.size.height - 140, width: 40, height: 40)
+        trashButton.alpha = 0
+        trashButton.addTarget(self, action: #selector(trashButtonTapped), for: .touchUpInside)
     }
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        floatingButton.frame = CGRect(x: view.frame.size.width - 70, y: view.frame.size.height - 150, width: 60, height: 60)
+    
+    
+    private func configureVC() {
+        view.addSubview(pickerView1)
+        view.addSubview(floatingButton)
+        view.addSubview(trashButton)
+        navigationItem.rightBarButtonItems = [settingsButton, slotvcButton, bookKeepingButton]
+        view.backgroundColor = .systemBackground
+        guard let customFont = UIFont(name: "RobotoMono-Italic", size: UIFont.labelFontSize) else {
+            fatalError("""
+                    Failed to load the "RobotoMono-Italic" font.
+                    Make sure the font file is included in the project and the font name is spelled correctly.
+                    """
+            )
+        }
+        self.navigationController!.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: customFont]
     }
+    
+    
+    //MARK: - Button Tapped Func
     
     @objc private func floatingButtonTapped() {
         sectionIsExpanded = !sectionIsExpanded
     }
     
-    private func configureVC() {
-            guard let customFont = UIFont(name: "RobotoMono-Italic", size: UIFont.labelFontSize) else {
-                fatalError("""
-                    Failed to load the "RobotoMono-Italic" font.
-                    Make sure the font file is included in the project and the font name is spelled correctly.
-                    """
-                )
-            }
-            self.navigationController!.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: customFont]
-        }
-    
+    @objc private func trashButtonTapped() {
+        print("Trash")
+    }
     
     @objc func settingsButtonTapped() {
         let choiceVC = ChoiceVC()
@@ -96,8 +120,6 @@ class PickerVC: UIViewController {
         present(bookKeepingVC, animated: true, completion: nil)
     }
 }
-
-
 
 //MARK: - UIPickerViewDataSource, UIPickerViewDelegate
 extension PickerVC: UIPickerViewDataSource, UIPickerViewDelegate {

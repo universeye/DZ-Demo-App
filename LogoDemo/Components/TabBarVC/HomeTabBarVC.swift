@@ -12,6 +12,7 @@ class HomeTabBarVC: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        UITabBar.appearance().tintColor = UIColor(named: "AppPurple")
         viewControllers = [createLogoVC(), createWKWebViewVC(), createAnimationVC(), createWidgetVC()]
     }
     
