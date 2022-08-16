@@ -20,6 +20,8 @@ class LogoSettingsVC: UIViewController {
     private let colorView = UIView()
     private let imageStackView = UIView()
     
+    private let joesTF = UIView()
+    
     var pro = ProfileColor(accentColor: .red)
     var ima = logoImage(imageName: "icon1")
     
@@ -37,6 +39,12 @@ class LogoSettingsVC: UIViewController {
         createDismissKBTappedGesture()
         configureImageStackView()
         configureColorView()
+        configureJoesTF()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
+        
     }
     
     
@@ -105,6 +113,7 @@ class LogoSettingsVC: UIViewController {
         colorView.backgroundColor = .secondarySystemBackground
         colorView.layer.cornerRadius = 15
         //shaodow
+        /*
         colorView.layer.shadowColor = UIColor.black.cgColor
         colorView.layer.shadowOffset = .zero
         colorView.layer.shadowRadius = 20
@@ -112,6 +121,7 @@ class LogoSettingsVC: UIViewController {
         //colorView.layer.shadowPath = UIBezierPath(rect: colorView.bounds).cgPath
         colorView.layer.shouldRasterize = true
         colorView.layer.rasterizationScale = UIScreen.main.scale
+         */
         
         let colorStack = ColorStackVC()
         colorStack.delegate = self
@@ -125,7 +135,23 @@ class LogoSettingsVC: UIViewController {
         ])
     }
     
-    
+    private func configureJoesTF() {
+        view.addSubview(joesTF)
+        joesTF.translatesAutoresizingMaskIntoConstraints = false
+        joesTF.backgroundColor = .secondarySystemBackground
+        joesTF.layer.cornerRadius = 30
+        
+        let joesTextFieldVC = JoesTextFieldVC()
+        joesTextFieldVC.delegate = self
+        self.addChildVC(childViewC: joesTextFieldVC, to: joesTF)
+        
+        NSLayoutConstraint.activate([
+            joesTF.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20),
+            joesTF.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15),
+            joesTF.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15),
+            joesTF.heightAnchor.constraint(equalToConstant: 60)
+        ])
+    }
     
     func addChildVC(childViewC: UIViewController, to containerView: UIView) {
         addChild(childViewC)
@@ -133,8 +159,30 @@ class LogoSettingsVC: UIViewController {
         childViewC.view.frame = containerView.bounds
         childViewC.didMove(toParent: self)
     }
+    
+    
+    
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            print(self.joesTF.frame.origin.y)
+            if self.joesTF.frame.origin.y == 673.0 {
+                self.joesTF.frame.origin.y = self.joesTF.frame.origin.y - keyboardSize.height
+                print("origin.y: \(self.view.frame.origin.y)")
+            }
+        }
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification) {
+        if self.joesTF.frame.origin.y != 0 {
+            self.joesTF.frame.origin.y = 673.0
+            print("kb will hide \(self.view.frame.origin.y)")
+        }
+    }
 }
 
+
+//MARK: - ColorStackVCDelegate, ImageStackVCDelegate
 extension LogoSettingsVC: ColorStackVCDelegate, ImageStackVCDelegate {
     func didChooseImage(logoImage: logoImage) {
         self.ima = logoImage
@@ -142,6 +190,17 @@ extension LogoSettingsVC: ColorStackVCDelegate, ImageStackVCDelegate {
     
     func didChooseColor(profile: ProfileColor) {
         self.pro = profile
+    }
+    
+    
+}
+
+
+//MARK: - JoesTextFieldVCDelegate
+extension LogoSettingsVC: JoesTextFieldVCDelegate {
+    func didTapSendd() {
+        print("success: \(self.view.frame.origin.y)")
+        
     }
     
     

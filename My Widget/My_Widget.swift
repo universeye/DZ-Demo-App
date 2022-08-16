@@ -49,9 +49,9 @@ struct My_WidgetEntryView : View {
 
     var body: some View {
         VStack {
-            ZStack {
+            VStack {
                 Image(systemName: "xmark")
-                    .font(.system(size: 130, weight: .bold))
+                    .font(.system(size: 30, weight: .bold))
                     .foregroundColor(.green)
                 
                 Text(entry.text)

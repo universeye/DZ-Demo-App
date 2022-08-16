@@ -3,10 +3,27 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF12BDE328AB3EEF00B69F13 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BF12BDE228AB3EEF00B69F13 /* IQKeyboardManagerSwift */; };
+		BF27B7EF273D22A400BD408D /* JoesChatRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF27B7EE273D22A400BD408D /* JoesChatRoomViewController.swift */; };
+		BF27B7F1273E090700BD408D /* NotificationsAndFocusModesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF27B7F0273E090700BD408D /* NotificationsAndFocusModesVC.swift */; };
+		BF27B7F5273E201E00BD408D /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF27B7F4273E201E00BD408D /* SplashScreen.swift */; };
+		BF27B7F7273E203300BD408D /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF27B7F6273E203300BD408D /* View+Ext.swift */; };
+		BF27B7F9273E255A00BD408D /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF27B7F8273E255A00BD408D /* SplashView.swift */; };
+		BF2C67B52730D4D0004DFD1B /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C67B42730D4D0004DFD1B /* OnBoardingView.swift */; };
+		BF2FBAB9270D631800402441 /* PhysicsEngineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2FBAB8270D631800402441 /* PhysicsEngineVC.swift */; };
+		BF3340C327462BE20004F9F3 /* SRCopyableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3340C227462BE20004F9F3 /* SRCopyableLabel.swift */; };
+		BF3CA4AC2706CB00002D642F /* NewButtonsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3CA4AB2706CB00002D642F /* NewButtonsVC.swift */; };
+		BF3CA4AF2706D31B002D642F /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3CA4AE2706D31B002D642F /* UIView+Extensions.swift */; };
+		BF4A4FC1273B6A7300FF2850 /* JoesTextFieldVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4A4FC0273B6A7300FF2850 /* JoesTextFieldVC.swift */; };
+		BF4A4FC3273B6AA000FF2850 /* JoesTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4A4FC2273B6AA000FF2850 /* JoesTextField.swift */; };
+		BF4A4FCC273CC6A400FF2850 /* JoesChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4A4FCB273CC6A400FF2850 /* JoesChatModel.swift */; };
+		BF4A4FCE273CCABA00FF2850 /* JoesChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4A4FCD273CCABA00FF2850 /* JoesChatTableViewCell.swift */; };
+		BF52189A271727EA00BB72D9 /* LocationButtonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF521899271727EA00BB72D9 /* LocationButtonVC.swift */; };
+		BF6795A2270AE8B500EBD681 /* ShazamVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6795A1270AE8B500EBD681 /* ShazamVC.swift */; };
 		BF6AA13726648E40001CD2CF /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF6AA13626648E40001CD2CF /* WidgetKit.framework */; };
 		BF6AA13926648E40001CD2CF /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF6AA13826648E40001CD2CF /* SwiftUI.framework */; };
 		BF6AA13C26648E40001CD2CF /* My_Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6AA13B26648E40001CD2CF /* My_Widget.swift */; };
@@ -40,11 +57,13 @@
 		BF7CF65126457F9A00F6C9D2 /* WKWebViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7CF65026457F9A00F6C9D2 /* WKWebViewVC.swift */; };
 		BF7CF6632648F99B00F6C9D2 /* SnapChatCameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7CF6622648F99B00F6C9D2 /* SnapChatCameraVC.swift */; };
 		BF7CF665264905C000F6C9D2 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7CF664264905C000F6C9D2 /* CircleButton.swift */; };
+		BF8F2AE82742160200DB903B /* UITableView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8F2AE72742160200DB903B /* UITableView+Ext.swift */; };
 		BF984A8F2681D89A00205B78 /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF984A8E2681D89A00205B78 /* AnimationViewController.swift */; };
 		BF984A912681E59A00205B78 /* AnimationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF984A902681E59A00205B78 /* AnimationTableViewCell.swift */; };
 		BF984A93268213BB00205B78 /* AnimationDemo2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF984A92268213BB00205B78 /* AnimationDemo2VC.swift */; };
 		BFAD64D426C434DD00BABC90 /* RobotoMono-Italic-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFAD64D226C434DD00BABC90 /* RobotoMono-Italic-VariableFont_wght.ttf */; };
 		BFAD64D526C434DD00BABC90 /* RobotoMono-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFAD64D326C434DD00BABC90 /* RobotoMono-VariableFont_wght.ttf */; };
+		BFB0283227474EB100E11235 /* CustumSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB0283127474EB100E11235 /* CustumSegmentedControl.swift */; };
 		BFDD5C29268481A400CD4986 /* SliderAniVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDD5C28268481A400CD4986 /* SliderAniVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +92,22 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BF27B7EE273D22A400BD408D /* JoesChatRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoesChatRoomViewController.swift; sourceTree = "<group>"; };
+		BF27B7F0273E090700BD408D /* NotificationsAndFocusModesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsAndFocusModesVC.swift; sourceTree = "<group>"; };
+		BF27B7F4273E201E00BD408D /* SplashScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
+		BF27B7F6273E203300BD408D /* View+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
+		BF27B7F8273E255A00BD408D /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		BF2C67B42730D4D0004DFD1B /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
+		BF2FBAB8270D631800402441 /* PhysicsEngineVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicsEngineVC.swift; sourceTree = "<group>"; };
+		BF3340C227462BE20004F9F3 /* SRCopyableLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRCopyableLabel.swift; sourceTree = "<group>"; };
+		BF3CA4AB2706CB00002D642F /* NewButtonsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewButtonsVC.swift; sourceTree = "<group>"; };
+		BF3CA4AE2706D31B002D642F /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		BF4A4FC0273B6A7300FF2850 /* JoesTextFieldVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoesTextFieldVC.swift; sourceTree = "<group>"; };
+		BF4A4FC2273B6AA000FF2850 /* JoesTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoesTextField.swift; sourceTree = "<group>"; };
+		BF4A4FCB273CC6A400FF2850 /* JoesChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoesChatModel.swift; sourceTree = "<group>"; };
+		BF4A4FCD273CCABA00FF2850 /* JoesChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoesChatTableViewCell.swift; sourceTree = "<group>"; };
+		BF521899271727EA00BB72D9 /* LocationButtonVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationButtonVC.swift; sourceTree = "<group>"; };
+		BF6795A1270AE8B500EBD681 /* ShazamVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShazamVC.swift; sourceTree = "<group>"; };
 		BF6AA13426648E40001CD2CF /* My WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "My WidgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF6AA13626648E40001CD2CF /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		BF6AA13826648E40001CD2CF /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -110,11 +145,13 @@
 		BF7CF65026457F9A00F6C9D2 /* WKWebViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKWebViewVC.swift; sourceTree = "<group>"; };
 		BF7CF6622648F99B00F6C9D2 /* SnapChatCameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapChatCameraVC.swift; sourceTree = "<group>"; };
 		BF7CF664264905C000F6C9D2 /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
+		BF8F2AE72742160200DB903B /* UITableView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Ext.swift"; sourceTree = "<group>"; };
 		BF984A8E2681D89A00205B78 /* AnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationViewController.swift; sourceTree = "<group>"; };
 		BF984A902681E59A00205B78 /* AnimationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationTableViewCell.swift; sourceTree = "<group>"; };
 		BF984A92268213BB00205B78 /* AnimationDemo2VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationDemo2VC.swift; sourceTree = "<group>"; };
 		BFAD64D226C434DD00BABC90 /* RobotoMono-Italic-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoMono-Italic-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		BFAD64D326C434DD00BABC90 /* RobotoMono-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoMono-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		BFB0283127474EB100E11235 /* CustumSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustumSegmentedControl.swift; sourceTree = "<group>"; };
 		BFDD5C28268481A400CD4986 /* SliderAniVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderAniVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -132,12 +169,49 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF12BDE328AB3EEF00B69F13 /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF27B7ED273D228E00BD408D /* JoesChatroom */ = {
+			isa = PBXGroup;
+			children = (
+				BF27B7EE273D22A400BD408D /* JoesChatRoomViewController.swift */,
+				BF4A4FCD273CCABA00FF2850 /* JoesChatTableViewCell.swift */,
+			);
+			path = JoesChatroom;
+			sourceTree = "<group>";
+		};
+		BF3CA4AA2706CAE3002D642F /* Buttons View */ = {
+			isa = PBXGroup;
+			children = (
+				BF3CA4AB2706CB00002D642F /* NewButtonsVC.swift */,
+				BF27B7F0273E090700BD408D /* NotificationsAndFocusModesVC.swift */,
+			);
+			path = "Buttons View";
+			sourceTree = "<group>";
+		};
+		BF3CA4AD2706D305002D642F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BF27B7F6273E203300BD408D /* View+Ext.swift */,
+				BF3CA4AE2706D31B002D642F /* UIView+Extensions.swift */,
+				BF8F2AE72742160200DB903B /* UITableView+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BF6795A0270AE89D00EBD681 /* ShazamKit */ = {
+			isa = PBXGroup;
+			children = (
+				BF6795A1270AE8B500EBD681 /* ShazamVC.swift */,
+			);
+			path = ShazamKit;
+			sourceTree = "<group>";
+		};
 		BF6AA13526648E40001CD2CF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -200,14 +274,18 @@
 		BF7CF6132644004F00F6C9D2 /* LogoDemo */ = {
 			isa = PBXGroup;
 			children = (
-				BFAD64D126C434C200BABC90 /* Fonts */,
 				BF6AA14F2664A85E001CD2CF /* LogoDemo.entitlements */,
 				BF7CF6142644004F00F6C9D2 /* AppDelegate.swift */,
+				BF2C67B42730D4D0004DFD1B /* OnBoardingView.swift */,
+				BF27B7F4273E201E00BD408D /* SplashScreen.swift */,
+				BF27B7F8273E255A00BD408D /* SplashView.swift */,
 				BF7CF6162644004F00F6C9D2 /* SceneDelegate.swift */,
 				BF7CF6182644004F00F6C9D2 /* ViewController.swift */,
 				BFDD5C2A2684D58800CD4986 /* Screens */,
 				BF7CF643264508A500F6C9D2 /* Model */,
 				BF7CF62E26442E2600F6C9D2 /* Components */,
+				BF3CA4AD2706D305002D642F /* Extensions */,
+				BFAD64D126C434C200BABC90 /* Fonts */,
 				BF6AA14A266491B5001CD2CF /* Widget */,
 				BF7CF61D2644005200F6C9D2 /* Assets.xcassets */,
 				BF7CF61F2644005200F6C9D2 /* LaunchScreen.storyboard */,
@@ -224,6 +302,7 @@
 				BF7CF63726443B8D00F6C9D2 /* Button */,
 				BF7CF6342644386800F6C9D2 /* TextField */,
 				BF7CF62F26442E3500F6C9D2 /* Label */,
+				BFB028332747539200E11235 /* SegmentedControl */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -232,6 +311,7 @@
 			isa = PBXGroup;
 			children = (
 				BF7CF63026442E4E00F6C9D2 /* LogoTitleLabel.swift */,
+				BF3340C227462BE20004F9F3 /* SRCopyableLabel.swift */,
 				BF7CF632264436B500F6C9D2 /* LogoBodyLabel.swift */,
 			);
 			path = Label;
@@ -241,6 +321,7 @@
 			isa = PBXGroup;
 			children = (
 				BF7CF6352644388500F6C9D2 /* LogoTextField.swift */,
+				BF4A4FC2273B6AA000FF2850 /* JoesTextField.swift */,
 			);
 			path = TextField;
 			sourceTree = "<group>";
@@ -268,6 +349,7 @@
 			isa = PBXGroup;
 			children = (
 				BF7CF6402644E7B000F6C9D2 /* Profile.swift */,
+				BF4A4FCB273CC6A400FF2850 /* JoesChatModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -279,8 +361,10 @@
 				BF7CF62A2644016400F6C9D2 /* LogoSettingsVC.swift */,
 				BF7CF6452645090500F6C9D2 /* ImageStackVC.swift */,
 				BF7CF63A2644DA1B00F6C9D2 /* ColorStackVC.swift */,
+				BF4A4FC0273B6A7300FF2850 /* JoesTextFieldVC.swift */,
 				BF7CF65026457F9A00F6C9D2 /* WKWebViewVC.swift */,
 				BF7CF6622648F99B00F6C9D2 /* SnapChatCameraVC.swift */,
+				BF521899271727EA00BB72D9 /* LocationButtonVC.swift */,
 			);
 			path = "Home Tab";
 			sourceTree = "<group>";
@@ -300,6 +384,7 @@
 				BF984A902681E59A00205B78 /* AnimationTableViewCell.swift */,
 				BF984A92268213BB00205B78 /* AnimationDemo2VC.swift */,
 				BFDD5C28268481A400CD4986 /* SliderAniVC.swift */,
+				BF2FBAB8270D631800402441 /* PhysicsEngineVC.swift */,
 			);
 			path = AnimationVC;
 			sourceTree = "<group>";
@@ -313,9 +398,20 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		BFB028332747539200E11235 /* SegmentedControl */ = {
+			isa = PBXGroup;
+			children = (
+				BFB0283127474EB100E11235 /* CustumSegmentedControl.swift */,
+			);
+			path = SegmentedControl;
+			sourceTree = "<group>";
+		};
 		BFDD5C2A2684D58800CD4986 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				BF27B7ED273D228E00BD408D /* JoesChatroom */,
+				BF6795A0270AE89D00EBD681 /* ShazamKit */,
+				BF3CA4AA2706CAE3002D642F /* Buttons View */,
 				BF7CF644264508B200F6C9D2 /* Home Tab */,
 				BF6B04832653FF78002A9B4A /* uiPicker */,
 				BF984A8D2681D88200205B78 /* AnimationVC */,
@@ -358,6 +454,9 @@
 				BF6AA14426648E44001CD2CF /* PBXTargetDependency */,
 			);
 			name = LogoDemo;
+			packageProductDependencies = (
+				BF12BDE228AB3EEF00B69F13 /* IQKeyboardManagerSwift */,
+			);
 			productName = LogoDemo;
 			productReference = BF7CF6112644004F00F6C9D2 /* LogoDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -388,6 +487,9 @@
 				Base,
 			);
 			mainGroup = BF7CF6082644004F00F6C9D2;
+			packageReferences = (
+				BF12BDE128AB3EEF00B69F13 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+			);
 			productRefGroup = BF7CF6122644004F00F6C9D2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -439,30 +541,48 @@
 				BF7CF6362644388500F6C9D2 /* LogoTextField.swift in Sources */,
 				BF6B04852653FFE2002A9B4A /* ChoiceVC.swift in Sources */,
 				BF7CF64F26457D5900F6C9D2 /* NormalButton.swift in Sources */,
+				BF2FBAB9270D631800402441 /* PhysicsEngineVC.swift in Sources */,
 				BF6AA14E266491E9001CD2CF /* WidgetVC.swift in Sources */,
+				BF8F2AE82742160200DB903B /* UITableView+Ext.swift in Sources */,
+				BF6795A2270AE8B500EBD681 /* ShazamVC.swift in Sources */,
 				BF7CF6492645094800F6C9D2 /* LogoImage.swift in Sources */,
+				BF4A4FC3273B6AA000FF2850 /* JoesTextField.swift in Sources */,
+				BF52189A271727EA00BB72D9 /* LocationButtonVC.swift in Sources */,
 				BF7CF6412644E7B000F6C9D2 /* Profile.swift in Sources */,
+				BF4A4FC1273B6A7300FF2850 /* JoesTextFieldVC.swift in Sources */,
 				BF7CF62B2644016400F6C9D2 /* LogoSettingsVC.swift in Sources */,
 				BF7CF6192644004F00F6C9D2 /* ViewController.swift in Sources */,
+				BF3340C327462BE20004F9F3 /* SRCopyableLabel.swift in Sources */,
 				BFDD5C29268481A400CD4986 /* SliderAniVC.swift in Sources */,
+				BF27B7F5273E201E00BD408D /* SplashScreen.swift in Sources */,
+				BF3CA4AC2706CB00002D642F /* NewButtonsVC.swift in Sources */,
+				BF4A4FCC273CC6A400FF2850 /* JoesChatModel.swift in Sources */,
 				BF7CF63B2644DA1B00F6C9D2 /* ColorStackVC.swift in Sources */,
 				BF6B04892654C010002A9B4A /* BookKeepingVC.swift in Sources */,
+				BFB0283227474EB100E11235 /* CustumSegmentedControl.swift in Sources */,
 				BF6B04872654064E002A9B4A /* SlotMachineVC.swift in Sources */,
 				BF6AA14226648E44001CD2CF /* My_Widget.intentdefinition in Sources */,
 				BF7CF64B2645124A00F6C9D2 /* ImageButton.swift in Sources */,
+				BF27B7F1273E090700BD408D /* NotificationsAndFocusModesVC.swift in Sources */,
 				BF7CF6292644013800F6C9D2 /* LogoVC.swift in Sources */,
 				BF7CF62D2644018500F6C9D2 /* HomeTabBarVC.swift in Sources */,
 				BF984A912681E59A00205B78 /* AnimationTableViewCell.swift in Sources */,
+				BF2C67B52730D4D0004DFD1B /* OnBoardingView.swift in Sources */,
+				BF27B7F7273E203300BD408D /* View+Ext.swift in Sources */,
 				BF7CF6152644004F00F6C9D2 /* AppDelegate.swift in Sources */,
 				BF7CF633264436B500F6C9D2 /* LogoBodyLabel.swift in Sources */,
 				BF7CF65126457F9A00F6C9D2 /* WKWebViewVC.swift in Sources */,
+				BF4A4FCE273CCABA00FF2850 /* JoesChatTableViewCell.swift in Sources */,
 				BF7CF665264905C000F6C9D2 /* CircleButton.swift in Sources */,
 				BF7CF6632648F99B00F6C9D2 /* SnapChatCameraVC.swift in Sources */,
 				BF7CF63926443BA200F6C9D2 /* ColorButton.swift in Sources */,
 				BF984A8F2681D89A00205B78 /* AnimationViewController.swift in Sources */,
 				BF984A93268213BB00205B78 /* AnimationDemo2VC.swift in Sources */,
+				BF27B7EF273D22A400BD408D /* JoesChatRoomViewController.swift in Sources */,
+				BF3CA4AF2706D31B002D642F /* UIView+Extensions.swift in Sources */,
 				BF7CF6172644004F00F6C9D2 /* SceneDelegate.swift in Sources */,
 				BF7CF63126442E4E00F6C9D2 /* LogoTitleLabel.swift in Sources */,
+				BF27B7F9273E255A00BD408D /* SplashView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -658,6 +778,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N492VC6PS9;
 				INFOPLIST_FILE = LogoDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -679,6 +800,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N492VC6PS9;
 				INFOPLIST_FILE = LogoDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -721,6 +843,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BF12BDE128AB3EEF00B69F13 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BF12BDE228AB3EEF00B69F13 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BF12BDE128AB3EEF00B69F13 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BF7CF6092644004F00F6C9D2 /* Project object */;
 }

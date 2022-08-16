@@ -10,16 +10,30 @@ import UIKit
 class AnimationTableViewCell: UITableViewCell {
     
     static let reuseID = "AnimationTableViewCell"
+    let MainSenderID = "30394985849"
     
-    private let label: UILabel = {
+    let messageLabel: UILabel = {
         let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
         return label
+    }()
+    
+    private let messageBubble: UIView = {
+       let uiview = UIView()
+        uiview.translatesAutoresizingMaskIntoConstraints = false
+        
+        return uiview
+    }()
+    
+    let nameLabel: UILabel = {
+        let lb = UILabel()
+        lb.translatesAutoresizingMaskIntoConstraints = false
+        return lb
     }()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        contentView.addSubview(label)
-        label.text = "label"
+        configure()
     }
     
     required init?(coder: NSCoder) {
@@ -28,20 +42,33 @@ class AnimationTableViewCell: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        label.sizeToFit()
-        label.frame = CGRect(x: 15, y: 0, width: label.frame.size.width, height: contentView.frame.size.height)
+        messageLabel.sizeToFit()
         
     }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    private func configure() {
+        addSubview(nameLabel)
+        addSubview(messageBubble)
+        
+        messageBubble.addSubview(messageLabel)
+        messageBubble.backgroundColor = .yellow
+        messageBubble.layer.backgroundColor = UIColor.black.cgColor
+        messageBubble.layer.cornerRadius = 10
+        
+        NSLayoutConstraint.activate([
+            nameLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
+            nameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
+            nameLabel.heightAnchor.constraint(equalToConstant: 50),
+            
+            
+            messageBubble.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 10),
+            messageBubble.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
+            messageBubble.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -40),
+        
+            messageLabel.topAnchor.constraint(equalTo: messageBubble.topAnchor, constant: 10),
+            messageLabel.leadingAnchor.constraint(equalTo: messageBubble.leadingAnchor, constant: 10),
+            messageLabel.trailingAnchor.constraint(equalTo: messageBubble.trailingAnchor, constant: -10)
+        ])
     }
 
 }

@@ -22,9 +22,9 @@ class CircleButton: UIButton {
     
     private func configure() {
         translatesAutoresizingMaskIntoConstraints = false
-        layer.cornerRadius = 100
-        layer.borderWidth = 10
-        layer.borderColor = UIColor.white.cgColor
+        //layer.cornerRadius = self.frame.width / 2
+        //layer.borderWidth = 10
+        //layer.borderColor = UIColor.white.cgColor
         
     }
 }

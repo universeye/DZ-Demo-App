@@ -6,14 +6,42 @@
 //
 
 import UIKit
+import SwiftUI
+import Combine
 
 class HomeTabBarVC: UITabBarController {
-
+    
+    var cancellableL: AnyCancellable!
+    let delegates = ContentViewDelegate()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        if #available(iOS 15.0, *) {
+            let appearance = UITabBarAppearance()
+            appearance.configureWithOpaqueBackground()
+            appearance.backgroundColor = .systemBackground
+            
+            self.tabBar.standardAppearance = appearance
+            self.tabBar.scrollEdgeAppearance = self.tabBar.standardAppearance
+        }
         UITabBar.appearance().tintColor = UIColor(named: "AppPurple")
-        viewControllers = [createLogoVC(), createWKWebViewVC(), createAnimationVC(), createWidgetVC()]
+        viewControllers = [createLogoVC(), createPickerViewVC(), createAnimationVC(), createNewButtonVC() , createWidgetVC()]
+        
+    }
+    
+    func showCoverScreen() {
+        let onBoardView = UIHostingController(rootView: OnBoardingView(delegate: delegates))
+        onBoardView.modalTransitionStyle = .crossDissolve
+        onBoardView.modalPresentationStyle = .overFullScreen
+        present(onBoardView, animated: true)
+        
+        self.cancellableL = delegates.$isDismiss.sink { status in
+            if status == true {
+                self.dismiss(animated: true, completion: nil)
+            }
+        }
     }
     
     func createLogoVC() -> UINavigationController {
@@ -26,7 +54,7 @@ class HomeTabBarVC: UITabBarController {
     
     //safari
     
-    func createWKWebViewVC() -> UINavigationController {
+    func createPickerViewVC() -> UINavigationController {
         let webVC = PickerVC()
         webVC.title = "Picker"
         webVC.tabBarItem.image = UIImage(systemName: "list.bullet.indent")
@@ -50,5 +78,14 @@ class HomeTabBarVC: UITabBarController {
         
         return UINavigationController(rootViewController: animateVC)
     }
-
+    
+    func createNewButtonVC() -> UINavigationController {
+        let newButtonVC = NewButtonsVC()
+        newButtonVC.title = "Buttons"
+        
+        newButtonVC.tabBarItem.image = UIImage(systemName: "hand.tap.fill")
+        
+        return UINavigationController(rootViewController: newButtonVC)
+    }
+    
 }
